@@ -943,6 +943,73 @@ display: inline-block;
 }
 
 
+form#booking {
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+}
+
+/* Label styling */
+form#booking label {
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: block;
+}
+
+/* Input styling */
+form#booking input[type="text"],
+form#booking input[type="email"],
+form#booking input[type="number"],
+form#booking input[type="date"],
+form#booking input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+/* Input focus effect */
+form#booking input[type="text"]:focus,
+form#booking input[type="email"]:focus,
+form#booking input[type="number"]:focus,
+form#booking input[type="date"]:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Submit button styling */
+form#booking button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 14px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Submit button hover effect */
+form#booking button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Spacing and layout */
+form#booking br {
+    line-height: 1.5;
+}
+
 .overview {
     font-size: 20px;
     /* padding: 4px;
