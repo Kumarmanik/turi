@@ -89,8 +89,8 @@
 
 <section class="booking">
     <h1 class="heading-title">book your trip!</h1>
-   
-    <form action="https://script.google.com/macros/s/AKfycbx2TtP-EQYrQYUDzXNYXPsVF1BhBpXrRrGWsPvp7eifCFbFGBL2rJcKbIFgmifzyHjA9Q/exec" class="book-form" method="post" name="contact-form" >
+    <!-- https://script.google.com/macros/s/AKfycbzp2Yhl2HgoHat16MkqJ9_qxoCS1S8ihEsqM8o521qxRG3BZ4-gpsIftsLdI-oTlIuw/exec -->
+    <!-- <form action="https://docs.google.com/spreadsheets/d/1UI-RMboEoE1A97hBk1dt9JbzlnjSsDDr1uiWY6qyk4U/edit?usp=sharing" class="book-form" method="post" name="booking" >
         <div class="flex">
             <div class="inputBox">
                 <span>name :</span>
@@ -140,9 +140,65 @@
         <input type="submit" class="btn" >
 
         <div class="visme_d" data-title="Untitled Project" data-url="epr9pg3x-untitled-project?fullPage=true" data-domain="forms" data-full-page="true" data-min-height="100vh" data-form-id="59157"></div><script src="https://static-bundles.visme.co/forms/vismeforms-embed.js"></script>
+    </form> -->
+
+    <form id="booking">
+        <!-- <div class="flex">
+        <div class="inputBox"> -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+    <!-- </div> -->
+        <br><br>
+    
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        <label for="phone">Phone:</label>
+        <input type="number" id="phone" name="phone" required><br><br>
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required><br><br>
+        <label for="location">Where To:</label>
+        <input type="text" id="place" name="place" required><br><br>
+    
+        <label for="arrival">Arrivals:</label>
+        <input type="date" id="arrival" name="arrival" required><br><br>
+    
+        <label for="leaving">Leaving:</label>
+        <input type="date" id="leaving" name="leaving" required><br><br>
+    
+        <label for="guest">No. of guest:</label>
+        <input type="number" id="guest" name="guest" required><br><br>
+
+        <label for="country">Country:</label>
+        <input type="text" id="country" name="country" required><br><br>
+    
+       
+    
+        <button type="submit">Submit</button>
+
+
+<!-- </div> -->
+        
     </form>
-
-
+    
+    <script>
+        document.getElementById('booking').addEventListener('submit', function(e) {
+            e.preventDefault();
+    
+            var formData = new FormData(this);
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "https://script.google.com/macros/s/AKfycbykpSEL9arHMc-VeDLdrirCqR2BgzntnW2jwcIXpZ1UAzbPaDwVJJwz6LjZtEJyUtYv/exec", true);
+            xhr.onload = function() {
+                if (xhr.status === 200) {
+                    alert("Form submitted successfully!");
+                } else {
+                    alert("Error submitting form!");
+                }
+            };
+            xhr.send(formData);
+        });
+    </script>
+    
+    <div class="visme_d" data-title="Untitled Project" data-url="epr9pg3x-untitled-project?fullPage=true" data-domain="forms" data-full-page="true" data-min-height="100vh" data-form-id="59157"></div><script src="https://static-bundles.visme.co/forms/vismeforms-embed.js"></script>
 </section>
 
 
@@ -203,6 +259,6 @@
 
 <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
 
-<script src="sheet.js"></script>
+<!-- <script src="sheet.js"></script> -->
 </body>
 </html>
